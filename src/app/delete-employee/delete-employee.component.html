@@ -1,0 +1,11 @@
+<div class="deletepop">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <p class="headdelete">Are you sure want to delete employee record?</p>
+
+  <button class="btn-success">Delete</button>
+  </form>
+  <br>
+  <p>
+    <button class="btn-success" (click)="destroy1()">Close </button>
+  </p>
+</div>

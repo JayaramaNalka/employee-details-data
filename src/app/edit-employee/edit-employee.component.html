@@ -1,0 +1,25 @@
+<div class="col-md-6">
+  <h2 class="text-center">Edit Employee</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" formControlName="email"  name="email" class="form-control" id="email">
+    </div>
+
+    <button class="btn-success">Update</button>
+  </form>
+  <br>
+  <p>
+    <button class="btn-success" (click)="destroy1()">Close </button>
+  </p>
+</div>

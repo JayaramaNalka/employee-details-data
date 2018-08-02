@@ -1,0 +1,45 @@
+<div>
+    
+  <h2 class="userdetails"> Employee Details</h2>
+  <button   (click)="initLoginModal()" class="addbutton"> Add Employee</button>
+  <template #messagecontainer>
+     
+    </template>
+  
+  <br>
+  <br>
+  <!-- <a [routerLink]="['/addemployee']">Add Employee</a> -->
+  <table class="tableemp">
+    <thead >
+    <tr class="headtab">
+      <th>Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="rowtab" *ngFor="let user of users" >
+      <td>{{user.id}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <!-- <td>
+        <a [routerLink]="['/employee']">Show Details</a>
+     
+        <a [routerLink]="['/edit-employee']">Edit Details</a>
+      </td> -->
+     
+      <td><button class="deletebutton" (click)="deleteUsers(user)"> Delete</button>
+        <button class="editbutton" (click)="editUsers(user)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+
+<!-- Custom modal setup -->
+<div id="modal-container" class="hidden"></div>
+<div id="overlay" (click)="removeModal()" class="hidden"></div>
+

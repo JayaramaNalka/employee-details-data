@@ -1,0 +1,9 @@
+.mainhead{
+    text-align: center;
+    border: 2px solid blueviolet;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4CAF50; /* Green */
+}
+
